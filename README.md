@@ -61,7 +61,8 @@ Un ejemplo para llamar el metodo de la libreria seria asi ( total = pay.calcular
 Y listo ya puedes usar la clase Pay directamente en tu proyecto.
 
 
-
+Video explicativo
+https://youtu.be/7-uIgXmrZlk?si=BdBm9Ug60EUwwCBh
 
 
 
