@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.the_best_Fast_Payment","l":"pay"}];updateSearchResults();
