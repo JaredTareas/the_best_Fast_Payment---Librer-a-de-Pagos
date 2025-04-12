@@ -11,17 +11,20 @@ FastPay es una librería en Java diseñada para simplificar el cálculo de pagos
 
 ## ✅ Funcionalidades principales
 
-- calcularPagoEfectivo(double monto) 
-  Calcula el total con posible descuento del 5% si el monto es mayor a 500.
+- calcularPagoEfectivo(double monto, double descuentoPorcentaje, double montoMinimoParaDescuento) 
+  Calcula el pago en efectivo.
+  Si el monto es mayor o igual al mínimo establecido, se aplica un descuento.
 
-- calcularPagoTarjeta(double monto)
-  Aplica un 3% de comisión al monto.
+- calcularPagoTarjeta(double monto,double comisionPorcentaje)
+     * Calcula el pago con tarjeta.
+     * Se aplica un porcentaje de comisión sobre el monto.
 
-- calcularPagoTransferencia(double monto)  
-  Agrega $15 de comisión fija.
+- calcularPagoTransferencia(double monto, double comisionFija)  
+ * Calcula el pago mediante transferencia.
+     * Se suma una comisión fija al monto.
 
-- calcularIVA(double subtotal)
-  Calcula el 16% de IVA.
+- calcularIVA(double subtotal,double ivaPorcentaje)
+     * Calcula el IVA sobre un subtotal dado.
 
 - validarMonto(double monto)
   Lanza una excepción si el monto es menor o igual a cero.
@@ -34,10 +37,10 @@ FastPay es una librería en Java diseñada para simplificar el cálculo de pagos
 ### Clase Pay
 ```java
 public final class Pay {
-    public static double calcularPagoEfectivo(double monto);
-    public static double calcularPagoTarjeta(double monto);
-    public static double calcularPagoTransferencia(double monto);
-    public static double calcularIVA(double subtotal);
+     public static double calcularPagoEfectivo(double monto, double descuentoPorcentaje, double montoMinimoParaDescuento);
+    public static double calcularPagoTarjeta(double monto, double comisionPorcentaje);
+    public static double calcularPagoTransferencia(double monto, double comisionFija);
+    public static double calcularIVA(double subtotal, double ivaPorcentaje);
     public static void validarMonto(double monto);
     public static void validarDescripcion(String descripcion);
 }
@@ -62,7 +65,7 @@ Y listo ya puedes usar la clase Pay directamente en tu proyecto.
 
 
 Video explicativo
-https://youtu.be/7-uIgXmrZlk?si=BdBm9Ug60EUwwCBh
+https://youtu.be/8hQLQSY5M0c
 
 
 
